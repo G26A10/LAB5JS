@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Личные финансы</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="header">
+      <h1 class="header__title"> Личные финансы</h1>
+      <div class="balance-block">
+        <span class="balance-block__label">Общий баланс:</span>
+        <span class="balance-block__value" id="total">0.00 MDL</span>
+      </div>
+    </header>
+
+    <section class="form-section">
+      <h2 class="section-title">Добавить транзакцию</h2>
+      <form class="form" id="transaction-form" novalidate>
+
+        <div class="form__group">
+          <label class="form__label" for="amount">Сумма</label>
+          <input class="form__input" type="number" id="amount" placeholder="Например: -500 или 1200" />
+          <span class="form__error" id="amount-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="category">Категория</label>
+          <select class="form__input form__select" id="category">
+            <option value="">—Выберите категорию —</option>
+            <option value="Еда">Еда</option>
+            <option value="Транспорт">Транспорт</option>
+            <option value="Зарплата">Зарплата</option>
+            <option value="Развлечения">Развлечения</option>
+            <option value="Здоровье">Здоровье</option>
+            <option value="Одежда">Одежда</option>
+            <option value="Другое">Другое</option>
+          </select>
+          <span class="form__error" id="category-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="description">Описание</label>
+          <input class="form__input" type="text" id="description" placeholder="Опишите транзакцию..." />
+          <span class="form__error" id="description-error"></span>
+        </div>
+
+        <button class="form__button" type="submit">Добавить</button>
+
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h2 class="section-title">История транзакций</h2>
+      <div class="table-wrapper">
+        <table class="table" id="transactions-table">
+          <thead>
+            <tr>
+              <th>Дата и время</th>
+              <th>Категория</th>
+              <th>Описание</th>
+              <th>Сумма</th>
+              <th>Действие</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+          </tbody>
+        </table>
+        <p class="empty-msg" id="empty-msg">Транзакций пока нет</p>
+      </div>
+    </section>
+
+    <section class="detail-section" id="detail-section" style="display: none;">
+      <h2 class="section-title">Подробное описание</h2>
+      <div class="detail-card" id="detail-card"></div>
+    </section>
+
+  </div>
+
+  <script src="src/index.js" type="module"></script>
+</body>
+</html>

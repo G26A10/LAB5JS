@@ -1,0 +1,173 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Шапка */
+.header {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ccc;
+}
+
+.balance-block {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+#total {
+  font-weight: bold;
+  color: green;
+}
+
+#total.negative {
+  color: red;
+}
+
+/* Форма */
+.form-section {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.form__group {
+  margin-bottom: 12px;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.form__input {
+  width: 100%;
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form__input.error {
+  border-color: red;
+}
+
+.form__error {
+  color: red;
+  font-size: 13px;
+}
+
+.form__button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form__button:hover {
+  background-color: #45a049;
+}
+
+/* Таблица */
+.table-section {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f0f0f0;
+}
+
+.table tr.positive {
+  background-color: #d4edda;
+}
+
+.table tr.negative {
+  background-color: #f8d7da;
+}
+
+.table tbody tr:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.amount-positive {
+  color: green;
+  font-weight: bold;
+}
+
+.amount-negative {
+  color: red;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.empty-msg {
+  color: #999;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Детали транзакции */
+.detail-section {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.detail-card p {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.detail-card p span {
+  font-weight: bold;
+}
